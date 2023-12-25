@@ -17,7 +17,7 @@ module RubyLsp
         sig { void }
         def initialize
           # -a is for "--auto-correct" (or "--autocorrect" on newer versions of RuboCop)
-          @runner = T.let(RuboCopRunner.new("-a"), RuboCopRunner)
+          @runner = T.let(RuboCopRunner.new("-A"), RuboCopRunner)
         end
 
         sig { override.params(uri: URI::Generic, document: Document).returns(String) }
